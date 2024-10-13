@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            outline: none;
+        }
+        .main{
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .calculator{
+            background-color: rgba(0, 0, 0, 0.784); 
+            padding: 14px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(4);
+            width: 270px;
+        }
+        input{
+            grid-column: span 4;
+            height: 70px;
+            width: 241px;
+            background-color: #ecf0f3;
+            box-shadow: inset -5px -5px 12px  #cbc7c7,inset 5px 5px 12px rgba(0,0,0,.16);
+            border: none;
+            border-radius: 10px;
+            color: black;
+            font-size: 40px;
+            text-align: end;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        button{
+            height: 36px;
+            width: 36px;
+            /* box-shadow: -5px -5px 12px #b6b2b2,5px 5px 12px rgba(0,0,0,.16); */
+            border: none;
+            border-radius: 20%;
+            margin: 8px;
+            font-size: 15px;
+        }
+        .equalto{
+            width: 260%;
+            border-radius: 10%;
+        }
+        .del{
+            background-color: red;
+        }
+        .allclear{
+            background-color: red;
+        }
+        button:hover{
+            border: 2px solid rgb(5, 172, 249);
+        }
+        p{
+            margin-top: 30%;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .operator{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="calculator">
+            <center>
+                <p>CASIO</p> 
+            </center>
+            <input type="text" placeholder="0" id="outputscreen">
+            <button onclick="clearAll(value)" class="allclear">AC</button>
+            <button value="C" onclick="clearButton(value)" class="del">DEL</button>
+            <button value="/" onclick="clickButton(value)" class="operator">/</button>
+            <button value="*" onclick="clickButton(value)" class="operator">*</button>
+            <button value="7" onclick="clickButton(value)">7</button>
+            <button value="8" onclick="clickButton(value)">8</button>
+            <button value="9" onclick="clickButton(value)">9</button>
+            <button value="-" onclick="clickButton(value)" class="operator">-</button>
+            <button value="4" onclick="clickButton(value)">4</button>
+            <button value="5" onclick="clickButton(value)">5</button>
+            <button value="6" onclick="clickButton(value)">6</button>
+            <button value="+" onclick="clickButton(value)" class="operator">+</button>
+            <button value="1" onclick="clickButton(value)">1</button>
+            <button value="2" onclick="clickButton(value)">2</button>
+            <button value="3" onclick="clickButton(value)">3</button>
+            <button value="." onclick="clickButton(value)" class="operator">.</button>
+            <button value="0" onclick="clickButton(value)">0</button>
+            <button value="=" onclick="equalTo(value)" class="equalto">=</button>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
